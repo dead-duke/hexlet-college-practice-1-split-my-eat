@@ -16,7 +16,5 @@ const calculateCalories = (weight, height, age, gender) => {
     macroRatio,
   };
 };
-const result = calculateCalories(70, 175, 30, 'male');
-console.log(result);
 
 export default calculateCalories;
