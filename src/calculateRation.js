@@ -49,7 +49,7 @@ const getFoodCount = (type, count, foodList) => {
   return result;
 };
 
-// Основная функция для получения массива продуктов на 7 дней
+// Основная функция для получения объекта продуктов на 7 дней
 const calculateRation = (calories, days = 7) => {
   const { protein, fat, carbs } = calories;
   const result = {};
