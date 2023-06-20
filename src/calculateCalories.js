@@ -14,7 +14,7 @@ function calculateMacroRatio(protein, fat, carbs) {
   return `${proteinPercentage.toFixed(1)}% / ${fatPercentage.toFixed(1)}% / ${carbsPercentage.toFixed(1)}%`;
 }
 
-const calculateCalories = (gender, age, height, weight, physicalActivity) => {
+const calculateCalories = (gender, age, height, weight, physicalActivity, caloriesCalculatorFormula) => {
   const MALE_BMR_CONSTANT_1 = 88.36;
   const MALE_BMR_CONSTANT_2 = 13.4;
   const MALE_BMR_CONSTANT_3 = 4.8;
@@ -51,11 +51,30 @@ const calculateCalories = (gender, age, height, weight, physicalActivity) => {
 
   const isMale = checkGender(gender);
 
-  const bmr = isMale
-    ? MALE_BMR_CONSTANT_1 + (MALE_BMR_CONSTANT_2 * weight)
-     + (MALE_BMR_CONSTANT_3 * height) - (MALE_BMR_CONSTANT_4 * age)
-    : FEMALE_BMR_CONSTANT_1 + (FEMALE_BMR_CONSTANT_2 * weight)
-     + (FEMALE_BMR_CONSTANT_3 * height) - (FEMALE_BMR_CONSTANT_4 * age);
+  let bmr;
+
+  switch (caloriesCalculatorFormula) {
+    case 'Mifflin-St Jeor':
+      bmr = isMale
+        ? (10 * weight) + (6.25 * height) - (5 * age) + 5
+        : (10 * weight) + (6.25 * height) - (5 * age) - 161;
+      break;
+    case 'Katch-McArdle':
+      const leanMass = weight * (1 - (fat / 100));
+      bmr = 370 + (21.6 * leanMass);
+      break;
+    case 'World Health Organization':
+      bmr = isMale
+        ? (13.707 * weight) + (492.3 * height) - (6.673 * age) + 77.607
+        : (9.740 * weight) + (172.9 * height) - (4.737 * age) + 667.051;
+      break;
+    default:
+      bmr = isMale
+        ? MALE_BMR_CONSTANT_1 + (MALE_BMR_CONSTANT_2 * weight)
+         + (MALE_BMR_CONSTANT_3 * height) - (MALE_BMR_CONSTANT_4 * age)
+        : FEMALE_BMR_CONSTANT_1 + (FEMALE_BMR_CONSTANT_2 * weight)
+         + (FEMALE_BMR_CONSTANT_3 * height) - (FEMALE_BMR_CONSTANT_4 * age);
+  }
 
   const calories = Math.round(bmr * ACTIVITY_MULTIPLIER);
   const protein = Math.round(weight * PROTEIN_MULTIPLIER);
