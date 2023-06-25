@@ -1,6 +1,6 @@
-import calculateCalories from '../src/calculateCalories.js';
+import calculateCalories from '../src/calculators/calculateCalories.js';
 
-test('calculateCalories returns correct values for male', () => {
+test('calculate calories', () => {
   const result = calculateCalories('male', 25, 175, 75, 'no activity', 'Mifflin-St Jeor');
   const testVal = {
     calories: 2069,

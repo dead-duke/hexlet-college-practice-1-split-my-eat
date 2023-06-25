@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import calculateRation from '../src/calculateRation.js';
+import calculateRation from '../src/calculators/calculateRation.js';
 
 const testFoodDataPath = path.resolve('./__fixtures__/foodDataTest.json');
 const testFoodData = JSON.parse(fs.readFileSync(testFoodDataPath, 'utf8'), 2);

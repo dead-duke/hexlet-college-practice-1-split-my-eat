@@ -1,5 +1,5 @@
-import calculateCalories from './calculateCalories.js';
-import calculateRation from './calculateRation.js';
+import calculateCalories from './calculators/calculateCalories.js';
+import calculateRation from './calculators/calculateRation.js';
 import caloriesFormatter from './formatters/caloriesFormatter.js';
 import rationFormatter from './formatters/rationFormatter.js';
 import getFoodData from './utilities/getFoodData.js';
