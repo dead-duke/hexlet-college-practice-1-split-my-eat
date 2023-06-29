@@ -6,11 +6,12 @@
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     - Ввод данных принят и выведена таблица
 
@@ -18,15 +19,16 @@
 - summary: |
     Прием данных(2)
   requirement: |
-    Принимает данные на вход "sex, age, height, weight". 0.1
+    Принимает данные на вход "sex, age, height, weight,physical activity level". 0.1
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     - Ввод данных принят и выведена таблица со значениями исходя из входных данных
 
@@ -38,11 +40,12 @@
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     - Выведена таблица с указанием продуктов в граммах
 
@@ -50,15 +53,16 @@
 - summary: |
     Вывод названия продуктов(4)
   requirement: |
-    Выводит название продуктов. 0.3
+    Выводит название продуктов и дни. 0.3
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     - Выведена таблица с указанием названия продуктов
 
@@ -70,11 +74,12 @@
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     - Выведена информация по количеству нужных каллорий/БЖУ/соотношения исходя из входных параметров
 
@@ -86,13 +91,14 @@
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: 
-    - Команда node bin/splitMyEat.js male 33 178 82
-    - Команда node bin/splitMyEat.js female 33 178 82
+    - Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
+    - Команда split-my-eat female 33 178 82  no activity
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
-    - Вводим команду node bin/splitMyEat.js female 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные female 33 178 82 no activity
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     Выведена разная таблица и информация по количеству нужных каллорий/БЖУ/соотношения
 
@@ -104,29 +110,31 @@
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     Вывод в таблице и информация по количеству нужных каллорий/БЖУ/соотношения указана без плавающей запятой
 
 
 - summary: |
-    Вывод на русском языке(8)
+    Вывод на английском языке(8)
   requirement: |
-    Выводит выходные данные на русском языке 1.1
+    Выводит выходные данные на английском языке 1.1
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
-    Вывод в таблице и информация по количеству нужных каллорий/БЖУ/соотношения указана на русском языке
+    Вывод в таблице и информация по количеству нужных каллорий/БЖУ/соотношения указана на английском языке
 
 
 - summary: |
@@ -136,10 +144,221 @@
   prerequisites: |
     Открыть консоль Ubuntu
   test-data: |
-    Команда node bin/splitMyEat.js male 33 178 82
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
   steps:
     - Открываем консоль Ubuntu
     - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
-    - Вводим команду node bin/splitMyEat.js male 33 178 82
+    - Вводим команду split-my-eat 
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
   expected-result: |
     Данные не выходят за пределы таблицы
+
+
+- summary: |
+    Выводит разные формулы (10)
+  requirement: |
+    Выводит разные расчеты при выборе разных формул расчета. 0.6
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
+    - Сравниваем вывод формул "Mifflin-St Jeor" и "Harris-Benedict"
+  expected-result: |
+    Выводит разные БЖУ и каллории
+
+
+- summary: |
+    Входит в программу из консоли (11)
+  requirement: |
+    Входит в программу из консоли по команде "split-my-eat" 0.7
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+  expected-result: |
+    Вошло в программу
+
+
+- summary: |
+    Выводит количество каллорий (12)
+  requirement: |
+    Выводит количество каллорий при выборе "calories" 0.8
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
+    - Выбираем "calories"
+  expected-result: |
+    Выводит количество каллорий
+
+
+- summary: |
+    Выводит продукты питания (13)
+  requirement: |
+    Выводит дни,продукты и их количество  при выборе "meal plan" 0.9 
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
+    - Выбираем "meal plan"
+  expected-result: |
+    Выводит продукты питания
+
+
+- summary: |
+    Выводит продукты питания,БЖУ и каллории (14)
+  requirement: |
+    Выводит дни,продукты и их количество  при выборе "calories and meal plan" 0.10 
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
+    - Выбираем "calories and meal plan"
+  expected-result: |
+    Выводит продукты питания,БЖУ и каллории
+
+
+- summary: |
+    Выход из приложения (15)
+  requirement: |
+    Выходит из программы при выборе "exit" 0.11
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 no activity Mifflin-St Jeor
+    - Выбираем "exit"
+  expected-result: |
+    Выводит программы 
+
+
+- summary: |
+    Выводит данные с выбором "1-3 light activities per week" (16)
+  requirement: |
+    Выводит данные с выбором "1-3 light activities per week" 0.12
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  1-3 light activities per week Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 1-3 light activities per week Mifflin-St Jeor
+    - Выбираем "calories and meal plan"
+  expected-result: |
+    Выводит продукты питания,БЖУ и каллории
+    
+
+- summary: |
+    Выводит данные с выбором "3-5 moderate activities per week" (17)
+  requirement: |
+    Выводит данные с выбором "3-5 moderate activities per week" 0.13
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  3-5 moderate activities per week Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 3-5 moderate activities per week  Mifflin-St Jeor
+    - Выбираем "calories and meal plan"
+  expected-result: |
+    Выводит продукты питания,БЖУ и каллории
+
+
+- summary: |
+    Выводит данные с выбором "5-6 moderate activities per week" (18)
+  requirement: |
+    Выводит данные с выбором "5-6 moderate activities per week" 0.14
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  5-6 moderate activities per week Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 5-6 moderate activities per week  Mifflin-St Jeor
+    - Выбираем "calories and meal plan"
+  expected-result: |
+    Выводит продукты питания,БЖУ и каллории
+
+
+- summary: |
+    Выводит данные с выбором "7 vigorous activities per week" (19)
+  requirement: |
+    Выводит данные с выбором "7 vigorous activities per week" 0.15
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  7 vigorous activities per week Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 7 vigorous activities per week  Mifflin-St Jeor
+    - Выбираем "calories and meal plan"
+  expected-result: |
+    Выводит продукты питания,БЖУ и каллории 
+
+
+- summary: |
+    Выводит данные с выбором "no activity" (20)
+  requirement: |
+    Выводит данные с выбором "no activity" 0.16
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Команда split-my-eat male 33 178 82  no activity Mifflin-St Jeor
+  steps:
+    - Открываем консоль Ubuntu
+    - По команде (cd spleat-my-eat) заходим в репозиторий утилиты
+    - Вводим команду split-my-eat
+    - Вводим данные male 33 178 82 no activity  Mifflin-St Jeor
+    - Выбираем "calories and meal plan"
+  expected-result: |
+    Выводит продукты питания,БЖУ и каллории
+
+
+- summary: |
+    Выводит разное количество каллорий, БЖУ и продуктов исходя из количества тренировок (21)
+  requirement: |
+    Выводит разное количество каллорий, БЖУ и продуктов исходя из количества тренировок 0.17
+  prerequisites: |
+    Открыть консоль Ubuntu
+  test-data: |
+    Тест-кейсы 16-20
+  steps:
+    - Сравниваем вывод консоли БЖУ и каллорий по тест-кейсам 16-20
+  expected-result: |
+    Выводит разные БЖУ и каллории
