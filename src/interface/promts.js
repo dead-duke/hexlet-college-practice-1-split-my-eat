@@ -1,5 +1,6 @@
 import enquirer from 'enquirer';
 import validator from '../utilities/validator.js';
+import normaizeDelimiter from '../utilities/normaizeDelimiter.js';
 
 export const whatUserGender = () => enquirer.prompt({
   name: 'gender',
@@ -28,7 +29,7 @@ export const whatUserWeight = (height) => enquirer.prompt({
   name: 'weight',
   type: 'input',
   message: 'What is your weight?',
-  initial: height - 100 > 0 ? height - 100 : 50,
+  initial: normaizeDelimiter(height) - 100 > 0 ? normaizeDelimiter(height) - 100 : 50,
   validate: (input) => validator(input, 'weight', 35, 160),
 });
 
